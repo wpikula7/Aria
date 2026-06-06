@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberTarcza - Bezpieczeństwo Sieci i Cyberbezpieczeństwo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Przejdź do treści głównej</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon" aria-hidden="true">🛡️</span>
+                <strong>CyberTarcza</strong>
+            </div>
+            <nav aria-label="Nawigacja główna">
+                <ul class="nav-menu">
+                    <li><a href="#home" aria-current="page">Start</a></li>
+                    <li><a href="#knowledge-base">Baza Wiedzy</a></li>
+                    <li><a href="#audit-tool">Test Bezpieczeństwa</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switch-container">
+                <button id="theme-toggle" aria-pressed="false">
+                    Tryb ciemny: <span id="theme-status">Wyłączony</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero-section">
+            <div class="section-container">
+                <h1>Zrozumieć Cyberbezpieczeństwo</h1>
+                <p class="lead-text">
+                    Bezpieczeństwo w sieci komputerowej to proces, a nie produkt. Dowiedz się, jak chronić swoje dane, 
+                    zrozumieć podstawowe protokoły sieciowe i skutecznie minimalizować ryzyko incydentów cyfrowych.
+                </p>
+                <a href="#knowledge-base" class="cta-button">Rozpocznij naukę</a>
+            </div>
+        </section>
+
+        <section id="knowledge-base" class="knowledge-section">
+            <div class="section-container">
+                <h2>Podstawowe Filary Bezpieczeństwa</h2>
+                <p class="section-intro">Poznaj triadę CIA – fundament każdego systemu ochrony informacji w sieciach.</p>
+                
+                <div class="grid-container">
+                    <article class="card">
+                        <h3>Poufność (Confidentiality)</h3>
+                        <p>
+                            Zapewnienie, że dane są dostępne wyłącznie dla uprawnionych użytkowników. 
+                            Głównym narzędziem realizującym ten cel jest silne szyfrowanie (np. protokół AES oraz HTTPS w sieciach web).
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Integralność (Integrity)</h3>
+                        <p>
+                            Gwarancja, że informacje nie zostały zmodyfikowane lub uszkodzone w trakcie przesyłania. 
+                            Weryfikację integralności zapewnia się poprzez funkcje skrótu (np. SHA-256) oraz podpisy cyfrowe.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Dostępność (Availability)</h3>
+                        <p>
+                            Zapewnienie, że autoryzowani użytkownicy mają stały dostęp do zasobów i sieci wtedy, gdy tego potrzebują. 
+                            Ochrona przed atakami typu DDoS oraz redundantna infrastruktura to klucz do dostępności.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="audit-tool" class="audit-section">
+            <div class="section-container">
+                <h2>Szybki Test Podstaw Bezpieczeństwa</h2>
+                <p>Ukończ poniższe 3 kroki, aby sprawdzić poziom przygotowania swojej sieci domowej lub firmowej.</p>
+                
+                <div class="step-progress-container" aria-hidden="true">
+                    <span id="step-indicator">Krok 1 z 3</span>
+                </div>
+
+                <div class="form-container">
+                    <form id="security-quiz" novalidate>
+                        <div class="form-step current-step" id="step-1" role="group" aria-labelledby="step-1-title">
+                            <h3 id="step-1-title">Krok 1: Aktualizacja oprogramowania</h3>
+                            <div class="form-group">
+                                <label for="router-update">Jak często aktualizujesz oprogramowanie układowe (firmware) swojego routera?</label>
+                                <select id="router-update" name="routerUpdate" required>
+                                    <option value="">Wybierz odpowiedź...</option>
+                                    <option value="auto">Automatycznie / Raz w miesiącu</option>
+                                    <option value="rarely">Rzadziej niż raz na pół roku</option>
+                                    <option value="never">Nigdy / Nie wiem jak to zrobić</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn-next">Następny krok</button>
+                        </div>
+
+                        <div class="form-step hidden-step" id="step-2" role="group" aria-labelledby="step-2-title">
+                            <h3 id="step-2-title">Krok 2: Dwuetapowa weryfikacja (2FA)</h3>
+                            <div class="form-group">
+                                <label for="mfa-status">W ilu kluczowych usługach (poczta, bankowość, media) masz włączone logowanie dwuskładnikowe?</label>
+                                <select id="mfa-status" name="mfaStatus" required>
+                                    <option value="">Wybierz odpowiedź...</option>
+                                    <option value="all">We wszystkich, gdzie to możliwe</option>
+                                    <option value="some">Tylko w banku</option>
+                                    <option value="none">W żadnej / Nie używam</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn-prev">Wstecz</button>
+                            <button type="button" class="btn-next">Następny krok</button>
+                        </div>
+
+                        <div class="form-step hidden-step" id="step-3" role="group" aria-labelledby="step-3-title">
+                            <h3 id="step-3-title">Krok 3: Zarządzanie hasłami</h3>
+                            <div class="form-group">
+                                <label for="password-strategy">W jaki sposób przechowujesz i generujesz swoje hasła dostępowe?</label>
+                                <select id="password-strategy" name="passwordStrategy" required>
+                                    <option value="">Wybierz odpowiedź...</option>
+                                    <option value="manager">Używam dedykowanego menedżera haseł</option>
+                                    <option value="browser">Zapisuję w przeglądarce internetowej</option>
+                                    <option value="repeat">Używam kilku podobnych haseł do wszystkiego</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn-prev">Wstecz</button>
+                            <button type="submit" class="btn-submit">Zakończ i sprawdź wynik</button>
+                        </div>
+                    </form>
+
+                    <div id="quiz-result" class="hidden-step" aria-live="polite">
+                        <h3>Twój wynik i rekomendacje</h3>
+                        <p id="result-text"></p>
+                        <button type="button" id="btn-restart" class="btn-secondary">Rozpocznij test ponownie</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <h2>Zgłoś Incydent lub Zadaj Pytanie</h2>
+                <p>Masz podejrzenia co do bezpieczeństwa swojej sieci? Skontaktuj się z nami przy pomocy prostego formularza.</p>
+                
+                <form id="contact-form" class="standard-form">
+                    <div class="form-group">
+                        <label for="contact-name">Imię lub pseudonim</label>
+                        <input type="text" id="contact-name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Adres e-mail</label>
+                        <input type="email" id="contact-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Treść wiadomości</label>
+                        <textarea id="contact-message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 CyberTarcza. Serwis zaprojektowany zgodnie ze standardami dostępności cyfrowej WCAG 2.2.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
